@@ -1,0 +1,28 @@
+{
+    "name": "svm-parent",
+    "license": "UNLICENSED",
+    "dependencies": {
+        "@typescript-eslint/eslint-plugin": "^4.11.0",
+        "@typescript-eslint/parser": "^4.11.0",
+        "concurrently": "^6.0.0",
+        "eslint": "^7.16.0",
+        "eslint-plugin-react": "^7.21.5",
+        "prettier": "^2.2.1"
+    },
+    "prettier": {
+        "trailingComma": "es5",
+        "tabWidth": 4,
+        "semi": true,
+        "singleQuote": true
+    },
+    "scripts": {
+        "build": "concurrently \"yarn run build-*\"",
+        "build-app": "yarn workspace @SVM/app build",
+        "dev": "concurrently \"yarn run dev-*\"",
+        "dev-app": "yarn workspace @SVM/app dev"
+    },
+    "private": true,
+    "workspaces": [
+        "app"
+    ]
+}
